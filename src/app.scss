@@ -1,0 +1,23 @@
+@use "./colors" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: Spartan;
+  src: url("../assets/Spartan-Regular.ttf");
+}
+
+body {
+  font-size: 15px;
+  font-family: Spartan;
+}
