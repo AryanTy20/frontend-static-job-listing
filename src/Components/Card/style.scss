@@ -1,0 +1,196 @@
+@use "../../colors" as *;
+
+.card {
+  width: 80vw;
+  margin: 2em auto;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 0 rgba($DesaturatedDarkCyan, 0.4);
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.4em;
+    background-color: $DesaturatedDarkCyan;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  .main {
+    // width: 24em;
+    height: 6em;
+    display: flex;
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 0 0 1em;
+
+      .top {
+        display: flex;
+        align-items: center;
+
+        h4 {
+          font-family: SpartanM;
+          font-size: 0.9rem;
+          color: $DesaturatedDarkCyan;
+        }
+        p {
+          margin: 0 0.6em;
+          font-family: SpartanB;
+          font-size: 0.6rem;
+          color: $LightGrayishCyan;
+          padding: 0.6em 0.8em;
+
+          &:first-of-type {
+            background-color: $DesaturatedDarkCyan;
+            border-radius: 100px;
+          }
+          &:last-child {
+            background-color: $VeryDarkGrayishCyan;
+            border-radius: 100px;
+          }
+        }
+      }
+
+      .title {
+        font-family: SpartanB;
+        font-size: 1.1rem;
+        color: $VeryDarkGrayishCyan;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $DesaturatedDarkCyan;
+        }
+      }
+      .additional-info {
+        display: flex;
+        align-items: center;
+        p {
+          margin: 0 0.8em;
+          font-weight: 700;
+          font-size: 0.85rem;
+          color: $DarkGrayishCyan;
+          &:first-child {
+            margin-left: -0.08em;
+          }
+
+          &:nth-child(2) {
+            position: relative;
+            margin: 0 1.5em;
+            &::before {
+              position: absolute;
+              content: "";
+              top: 50%;
+              left: -25%;
+              transform: translateY(-50%);
+              height: 0.3em;
+              width: 0.3em;
+              border-radius: 50%;
+              background-color: $DarkGrayishCyan;
+            }
+            &::after {
+              position: absolute;
+              content: "";
+              top: 50%;
+              right: -25%;
+              transform: translateY(-50%);
+              height: 0.3em;
+              width: 0.3em;
+              border-radius: 50%;
+              background-color: $DarkGrayishCyan;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    li {
+      font-family: SpartanB;
+      font-size: 0.83rem;
+      background-color: rgba($DesaturatedDarkCyan, 0.1);
+      color: $DesaturatedDarkCyan;
+      padding: 0.5em;
+      border-radius: 0.25em;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $LightGrayishCyan;
+        background-color: $DesaturatedDarkCyan;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5em;
+    position: relative;
+
+    .main {
+      flex-direction: column;
+      margin: 0 0 1em 0;
+
+      .poster {
+        position: absolute;
+        top: -10%;
+        left: 8%;
+        height: 3em;
+        width: 3em;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .meta {
+        margin: 1em 0 !important;
+        justify-content: initial;
+        gap: 1em 0;
+        font-size: 0.83rem !important;
+      }
+    }
+
+    .tags {
+      width: 100%;
+      margin-top: 1.5em;
+      flex-wrap: wrap;
+      justify-content: initial;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -1em;
+        left: 0;
+        height: 0.1em;
+        width: 100%;
+        background-color: rgba($DarkGrayishCyan, 0.5);
+      }
+      li {
+        margin: 0;
+      }
+    }
+  }
+}

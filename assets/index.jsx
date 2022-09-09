@@ -1,0 +1,13 @@
+export { default as account } from "./account.svg";
+export { default as bgHeaderDesktop } from "./bg-header-desktop.svg";
+export { default as bgHeaderMobile } from "./bg-header-mobile.svg";
+export { default as eyecam } from "./eyecam-co.svg";
+export { default as faceit } from "./faceit.svg";
+export { default as removeIcon } from "./icon-remove.svg";
+export { default as insure } from "./insure.svg";
+export { default as loopStudio } from "./loop-studios.svg";
+export { default as manage } from "./manage.svg";
+export { default as myHome } from "./myhome.svg";
+export { default as photosnap } from "./photosnap.svg";
+export { default as shortly } from "./shortly.svg";
+export { default as airFilterCompany } from "./the-air-filter-company.svg";

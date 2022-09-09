@@ -1,0 +1,14 @@
+@use "../../colors" as *;
+
+.header {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: $DesaturatedDarkCyan;
+  isolation: isolate;
+  img {
+    height: 100%;
+    width: 100%;
+    scale: 1.08;
+  }
+}

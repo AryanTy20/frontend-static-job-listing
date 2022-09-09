@@ -1,0 +1,96 @@
+@use "../../colors" as *;
+
+.search {
+  position: relative;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: -2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+  background-color: #ffffff;
+  border-radius: 0.5em;
+
+  box-shadow: 0 0 20px 0 rgba($DesaturatedDarkCyan, 0.4);
+  // box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+  .tags {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .tag {
+      display: flex;
+      align-items: center;
+      margin: 0 0.3em;
+      p {
+        color: $DesaturatedDarkCyan;
+        font-family: SpartanB;
+        font-size: 0.83rem;
+        background-color: rgba($DesaturatedDarkCyan, 0.1);
+        padding: 0.54em;
+        border-top-left-radius: 0.25em;
+        border-bottom-left-radius: 0.25em;
+        user-select: none;
+      }
+      .remove {
+        background-color: $DesaturatedDarkCyan;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5em;
+        border-top-right-radius: 0.25em;
+        border-bottom-right-radius: 0.25em;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: $VeryDarkGrayishCyan;
+        }
+      }
+    }
+  }
+
+  .clear {
+    button {
+      color: $DarkGrayishCyan;
+      font-weight: bold;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      cursor: pointer;
+      position: relative;
+      isolation: isolate;
+      transition: color 0.3s;
+
+      &::after {
+        z-index: -1;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        height: 5%;
+        width: 100%;
+        background-color: $DesaturatedDarkCyan;
+        transition: opacity 0.3s;
+      }
+
+      &:hover {
+        color: $DesaturatedDarkCyan;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and( max-width:600px) {
+  .search {
+    width: 90vw;
+  }
+}

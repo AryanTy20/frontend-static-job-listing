@@ -13,11 +13,27 @@ li {
   list-style: none;
 }
 @font-face {
-  font-family: Spartan;
+  font-family: SpartanM;
+  src: url("../assets/Spartan-Medium.ttf");
+}
+@font-face {
+  font-family: SpartanB;
+  src: url("../assets/Spartan-Bold.ttf");
+}
+
+@font-face {
+  font-family: SpartanR;
   src: url("../assets/Spartan-Regular.ttf");
 }
 
 body {
+  font-family: SpartanR;
   font-size: 15px;
-  font-family: Spartan;
+  background-color: $LightGrayishCyan;
+}
+
+@media screen and (max-width: 600px) {
+  .searchOut {
+    margin: 3em 0;
+  }
 }
