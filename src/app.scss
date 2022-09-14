@@ -32,8 +32,25 @@ body {
   background-color: $LightGrayishCyan;
 }
 
+.attribution {
+  font-family: SpartanM;
+  margin: 1em 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
 @media screen and (max-width: 600px) {
   .searchOut {
     margin: 3em 0;
+  }
+
+  .attribution {
+    width: 90%;
+    padding: 1em;
+    margin: 1em auto;
   }
 }
