@@ -32,8 +32,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://frontend-static-job-listing.vercel.app/
-- Live Site URL: https://github.com/AryanTy20/frontend-static-job-listing
+- Solution URL: https://github.com/AryanTy20/frontend-static-job-listing
+- Live Site URL:https://frontend-static-job-listing.vercel.app/
+
 
 ## My process
 
